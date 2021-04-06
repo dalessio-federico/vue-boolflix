@@ -12,10 +12,24 @@
 <body>
     <div class="wrapper" id="root">
         <div class="header">
-
+            <div class="logo">
+                <h1>Boolflix</h1>
+            </div>
+            <div class="search_bar">
+                <label for="film_seach">Seleziona il titolo del film</label>
+                <input type="text" id="film_search" name="film_search" placeholder="Enter Title" v-model="srcParams" v-on:keyup.enter="srcEvent">
+                <button @click="srcEvent">cerca</button>
+            </div>
         </div>
         <div class="main_content">
-            
+            <div class="film_box" v-for="e in movieList">
+                <div class="film_info">
+                    <p><span>Titolo</span> : {{e.title}}</p>
+                    <p><span>Titolo originale</span> : {{e.original_title}}</p>
+                    <p><span>Lingua originale</span> : {{e.original_language}}</p>
+                    <p><span>Voto</span> : {{e.vote_average}}</p>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/master.js"></script>

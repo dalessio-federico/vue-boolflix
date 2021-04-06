@@ -3,3 +3,80 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-size: 14px;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+}
+
+.logo h1 {
+    color: red;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.search_bar {
+    margin-right: 20px;
+}
+
+.search_bar label {
+    color: #a9a9a9;
+    margin-right: 10px;
+}
+
+.search_bar input:focus {
+    outline: none;
+}
+
+.main_content {
+    height: calc(100% - 8vh);
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(41, 40, 41);
+}
+
+.film_box {
+    height: 40vh;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+}
+
+.film_info p {
+    color: #a9a9a9;
+    margin: 10px 0;
+}
+
+.film_info p span {
+    font-size: 15px;
+    color: white;
+}
