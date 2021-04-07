@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Boolflix</title>
 </head>
@@ -24,10 +25,13 @@
         <div class="main_content">
             <div class="film_box" v-for="e in movieList">
                 <div class="film_info">
-                    <p><span>Titolo</span> : {{e.title}}</p>
-                    <p><span>Titolo originale</span> : {{e.original_title}}</p>
+                    <p><span>Titolo</span> : {{e.title}} {{e.name}}</p>
+                    <p><span>Titolo originale</span> : {{e.original_title}} {{e.original_name}}</p>
                     <p><span>Lingua originale</span> : {{e.original_language}}</p>
-                    <p><span>Voto</span> : {{e.vote_average}}</p>
+                    <ul>
+                        <li><span>Voto:</span></li>
+                        <li v-for="vote in e.vote_average"><i :class="vote"></i></li>
+                    </ul>
                 </div>
             </div>
         </div>

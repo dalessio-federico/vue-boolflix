@@ -71,6 +71,10 @@ body {
     text-align: center;
 }
 
+.film_info {
+    max-height: 270px;
+}
+
 .film_info p {
     color: #a9a9a9;
     margin: 10px 0;
@@ -78,5 +82,15 @@ body {
 
 .film_info p span {
     font-size: 15px;
+    color: white;
+}
+
+.film_info ul {
+    list-style: none;
+}
+
+.film_info li,
+.film_info li i {
+    display: inline-block;
     color: white;
 }
