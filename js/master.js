@@ -70,7 +70,6 @@ var root = new Vue({
                                         console.log("concat", this.movieList);
                                     })
                             })
-                        
                     },
         getFlag : function(flag) 
         {

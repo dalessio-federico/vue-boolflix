@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="main_content">
-            <h2 v-if="srcParams == ''"> SCEGLI IL FILM O LA SERIE CHE VUOI VEDERE</h2>
+            <h2 v-if="movieList.length == 0"> SCEGLI IL FILM O LA SERIE CHE VUOI VEDERE</h2>
             <div class="film_box" v-for="e in movieList" v-else>
                 <img class ="poster" :src="getPoster(e.poster_path)" v-if="e.poster_path" alt="poster">
                 <img class ="poster" src="img/img_not_found.png" v-else alt="">
