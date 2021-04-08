@@ -24,14 +24,18 @@
         </div>
         <div class="main_content">
             <div class="film_box" v-for="e in movieList">
+                <img class ="poster" :src="getPoster(e.poster_path)" v-if="e.poster_path" alt="poster">
+                <img class ="poster" src="img/img_not_found.png" v-else alt="">
                 <div class="film_info">
                     <p><span>Titolo</span> : {{e.title}} {{e.name}}</p>
                     <p><span>Titolo originale</span> : {{e.original_title}} {{e.original_name}}</p>
-                    <p><span>Lingua originale</span> : {{e.original_language}}</p>
+                    <p><span>Lingua originale</span> : {{e.original_language}} <img class="flag" v-if="avaibleLenguage.includes(e.original_language)" :src="getFlag(e.original_language)" alt="flag"></p>
                     <ul>
                         <li><span>Voto:</span></li>
                         <li v-for="vote in e.vote_average"><i :class="vote"></i></li>
                     </ul>
+                    <p v-if = "e.overview"><span>Trama</span> : {{e.overview}} </p>
+                    <p v-else>Nessuna trama disponibile</p>
                 </div>
             </div>
         </div>

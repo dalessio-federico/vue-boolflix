@@ -10,6 +10,7 @@ var root = new Vue({
         movieList : [],
         films : [],
         srcParams : "",
+        avaibleLenguage : ["it", "en", "ja", "fr"]
     },
 
     methods : {
@@ -31,7 +32,6 @@ var root = new Vue({
                             {
                                 var tempMovies = r.data.results;
                                 console.log(this.films)
-
                                 axios
                                 .get("https://api.themoviedb.org/3/search/tv",
                                     {
@@ -71,7 +71,16 @@ var root = new Vue({
                                     })
                             })
                         
-                    }
+                    },
+        getFlag : function(flag) 
+        {
+            return `img/${flag}.png`
+        },
+
+        getPoster : function(poster)
+        {
+            return `https://image.tmdb.org/t/p/w342/${poster}`
+        }
     }
 
 })
