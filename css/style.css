@@ -55,6 +55,11 @@ body {
     background-color: rgb(41, 40, 41);
 }
 
+.main_content h2 {
+    color: white;
+    font-size: 30px;
+}
+
 .film_box {
     position: relative;
     height: 45vh;
